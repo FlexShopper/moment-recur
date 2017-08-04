@@ -1,48 +1,51 @@
 {
-    "name": "moment-recur",
-    "version": "1.0.3",
-    "description": "A momentjs plugin for matching and generating recurring dates.",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/c-trimm/moment-recur.git"
+  "name": "@flexshopper/moment-recur",
+  "description": "A momentjs plugin for matching and generating recurring dates.",
+  "version": "1.0.7",
+  "author": "Flexshopper",
+  "bugs": "https://github.com/FlexShopper/moment-recur/issues",
+  "dependencies": {
+    "moment": "<3.0.0"
+  },
+  "devDependencies": {
+    "@flexshopper/eslint-config-flexshopper": "^5.1.1",
+    "chai": "^4.1.0",
+    "eslint": "^3.8.1",
+    "fixpack": "^2.3.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=6.8.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "mocha": true
     },
-    "keywords": [
-        "momentjs",
-        "date",
-        "recur"
-    ],
-    "author": "Casey Trimm",
-    "license": "Unlicense",
-    "eslintConfig": {
-        "env": {
-            "mocha": true
-        },
-        "rules": {
-          "eqeqeq": 0
-        },
-        "extends": "@flexshopper/flexshopper"
+    "rules": {
+      "eqeqeq": 0
     },
-    "dependencies": {
-        "moment": "<3.0.0"
-    },
-    "engines": {
-        "node": ">=6.8.0"
-    },
-    "devDependencies": {
-        "@flexshopper/eslint-config-flexshopper": "^5.1.1",
-        "chai": "^4.1.0",
-        "eslint": "^3.8.1",
-        "fixpack": "^2.3.1",
-        "mocha": "^3.5.0",
-        "nyc": "^11.1.0"
-    },
-    "scripts": {
-        "lint": "eslint --ignore-path .gitignore --fix .",
-        "test": "npm run test-cov && npm run lint",
-        "test-cov": "nyc --statements 85 --functions 85 --reporter=lcov --reporter=text --reporter=html npm run test-run",
-        "test-only": "npm run test-run",
-        "test-run": "NODE_ENV=test mocha --recursive --timeout 10000 ./tests/**/*.spec.js",
-        "test-watch": "npm run test-run -- --watch"
-    }
+    "extends": "@flexshopper/flexshopper"
+  },
+  "homepage": "https://github.com/FlexShopper/moment-recur",
+  "keywords": [
+    "date",
+    "momentjs",
+    "recur"
+  ],
+  "license": "Unlicense",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flexshopper/moment-recur.git"
+  },
+  "scripts": {
+    "fix": "fixpack",
+    "lint": "eslint --ignore-path .gitignore --fix .",
+    "test": "npm run test-cov && npm run lint",
+    "test-cov": "nyc --statements 85 --functions 85 --reporter=lcov --reporter=text --reporter=html npm run test-run",
+    "test-only": "npm run test-run",
+    "test-run": "NODE_ENV=test mocha --recursive --timeout 10000 ./tests/**/*.spec.js",
+    "test-watch": "npm run test-run -- --watch"
+  }
 }

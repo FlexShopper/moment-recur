@@ -1,5 +1,6 @@
-moment-recur
+@flexshopper/moment-recur
 =====
+This plugin is/will be used for schedule generation
 moment-recur is a recurring date plugin for [momentjs](http://momentjs.com/). This plugin handles dates only; time information is discarded.
 
 The rule matching concept is borrowed from the excellent [node-date-recur](https://github.com/appsattic/node-date-recur) library created by Andrew Chilton.
@@ -18,39 +19,15 @@ Getting Started
 ---------------
 moment-recur can be included in your project a few different ways.
 
-### Browser
-Simply include the momentjs script, then the moment-recur script.
-```html
-<script src="moment.min.js"></script>
-<script src="moment-recur.js"></script>
-```
-
-
-### Browser with RequireJS
-moment-recur also works with RequireJS. Include it just like any other script.
-```js
-define(["moment", "moment-recur"], function(moment){
-    //you probably won't need a reference to moment-recur itself, so include it last.
-});
-```
-
-
-### Bower
-moment-recur is a register bower component.
-```
-bower install moment-recur
-```
-
 
 ### node.js
 moment-recur can be installed with npm and required into a script.
 ```
-npm install moment-recur
+npm install @flexshopper/moment-recur
 ```
 
 ```js
-var moment = require('moment');
-require('moment-recur');
+const moment = require('@flexshopper/moment-recur')(require('moment'));
 ```
 
 
